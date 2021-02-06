@@ -1,4 +1,4 @@
-/* Define the color palettes using css variables */
+/* Color Palettes */
 
 :root {
   --color-primary: #2584ff;
@@ -17,11 +17,11 @@
   box-sizing: border-box;
 }
 
+/* Typography */
+
 html {
   font-size: 62.5%;
 }
-
-/* Define typography */
 
 body {
   font-family: Inter, Arial, Helvetica, sans-serif;
@@ -118,6 +118,7 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -286,7 +287,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
 }
 
 .input-group .btn {
@@ -477,6 +478,7 @@ a {
 
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
 }
 
 .testimonial__image > img {
@@ -490,12 +492,18 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
   }
+
   .testimonial .quote {
     margin-left: 6rem;
+    margin-right: 0;
   }
 }
 
@@ -535,7 +543,7 @@ a {
   }
   .callout .btn {
     justify-self: start;
-    margin: 2rem;
+    margin: 0 2rem;
   }
 }
 
@@ -572,4 +580,42 @@ a {
   /* display: block; */
   max-height: 100vh;
   opacity: 1;
+}
+
+/* Blocks */
+.blocks {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
